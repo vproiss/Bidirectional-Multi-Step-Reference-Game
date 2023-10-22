@@ -8,17 +8,8 @@
 1. Setting up the environment. 
     * Recreate the environment: `conda env create --name myenv --file environment.yml`
     * Activate conda env: `conda activate --name`
-    * [optional] Update `environment.yml`:
-        - `echo "  - new-package1=1.2.3" >> environment.yml`
-        - `conda env update --name myenv --file environment.yml`
 
-2. [optional] The project contains large files. Before running the `main.py`, get acquatend with Git LFS.
-    * Install Git LFS: `git lfs install`
-    * Track large files: `git lfs track "folder/*"` and `git add .gitattributes` if file doesn't exist, then `git commit -m "Track file with Git LFS"`
-    * Commit large files: `git add "folder/*"`
-    * Push changes
-
-    Useful once you push extracted image features or training results to a remote repository. 
+2. `data/` and ``results/`` folders are pushed with .gitignore since the files are too large.
 
 3. Reposetory strucure.
 | configs
