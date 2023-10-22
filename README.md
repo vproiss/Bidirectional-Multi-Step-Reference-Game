@@ -4,11 +4,11 @@
 
 ## Project Set-Up
 
-1. Setting up the environment. 
+1. Clone the repository with ``git clone [repository URL]``.
+2. Large ``data/`` and ``results/`` folders are pushed with ``.gitignore``. They will appear once you clone the repository.
+3. Setting up the environment. 
     * Recreate the environment: ``conda env create --name myenv --file environment.yml``
     * Activate conda env: ``conda activate --name``
-
-2. Large ``data/`` and ``results/`` folders are pushed with ``.gitignore``. Clone the repository to see the folders.
 
 ## Reposetory Strucure
 
