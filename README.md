@@ -12,7 +12,7 @@
 
 ## Reposetory Strucure
 
-
+![Repository Structure](images/repo-structure.png)
 
 
 
