@@ -15,7 +15,7 @@
 <img src="images/repo-structure.png" width="300" height="500">
 
 ## Project Execution
-- The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. **You can skip this step:** files are already saved in ``data`` folder for further usage.
+- The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step: files are already saved in ``data`` folder for further usage.
 - Run ``main.py`` to execute the rest of the project:
     - ``python3 main.py`` will execute training with all hyperparamters one by one (see ``args.py``)
 
