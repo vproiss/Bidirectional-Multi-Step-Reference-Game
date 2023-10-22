@@ -147,7 +147,6 @@ def run_training(learning_rate=args.learning_rates[0], EPOCHS=args.epochs[0], BA
 
     test_loss_results = []
     test_accuracy_results = []
-    #test_cumulative_rewards_per_epoch = []
 
     # Initialize states for the message and agent.
     message_states = None
@@ -218,7 +217,6 @@ def run_training(learning_rate=args.learning_rates[0], EPOCHS=args.epochs[0], BA
     print(f'Epoch {epoch}, Test Loss: {test_loss:.2f}, Test Accuracy: {test_accuracy:.2f}%')
     test_loss_results.append(test_loss)
     test_accuracy_results.append(test_accuracy)
-    #test_cumulative_rewards_per_epoch.append(test_cumulative_reward)
 
     return agent, train_loss_results, train_accuracy_results, cumulative_rewards_per_epoch, val_loss_results, val_accuracy_results, val_cumulative_rewards_per_epoch, test_loss_results, test_accuracy_results
 
