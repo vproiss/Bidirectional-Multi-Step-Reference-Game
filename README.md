@@ -12,27 +12,7 @@
 
 ## Reposetory Strucure
 
-- README.md
-- configs
-  - settings.py
-- data
-  - processed_data
-    - test_data.tfrecord
-    - train_data.tfrecord
-    - val_data.tfrecord
-- environment.yml
-- main.py
-- models
-  - agent.py
-  - communication.py
-- pyrightconfig.json
-- results
-- training
-  - training.py
-- utils
-  - args.py
-  - data_loader.py 
-  - data_preprocessor.py
+
 
 
 
