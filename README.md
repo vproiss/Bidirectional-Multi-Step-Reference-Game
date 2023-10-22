@@ -16,16 +16,7 @@
 
 **Notes:**
 - The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step – files are already saved in ``data`` folder for further usage.
-- The rest is executed via ``main.py``.
-
-
-    * Run `python3 main.py` to execute the whole project:
-        - `data_preprocessor.py` creates `R1` and `R2` image feature subsets along with one-hot encoded target vectors `t1` and `t2` that the model will be trained on;
-        - `agent.py` runs the agent models;
-        - `communication.py` is responsible for agent communication;
-        - `training.py` is for training as well as evaluaton the test and validation datasets. It will also produce visualizations.
-        - `args.py` sets the hyperparameters as lerning rate, number of epochs and batch sizes;
-        - `settings.py` you can manually adjust other model parameters, such as embedding_size, scaling_factor, etc.
+- The ``main.py`` will execute the rest of the project.
 
 
 5. python main.py --learning-rates 0.001 0.0001 --batch-sizes 32 64 --epochs 50 100
