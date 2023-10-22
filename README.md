@@ -11,15 +11,14 @@
 2. ``data/`` and ``results/`` folders are pushed with ``.gitignore`` since the files are too large.
 
 ## Reposetory Strucure
-| -- configs
-     -- settings.py
-| data
-    | processed_data
-| models
-| training
-| utils
-    data_loader.py ---> loads COCO captions dataset, extracts features with ResNet50, 
-                        and saves `train`, `test` and `val` datasets as `{ds}.tfrecord` files.
+|-- configs
+||-- settings.py
+|--data
+|--processed_data
+|--models
+|--training
+|--utils
+||-- data_loader.py [loads COCO captions dataset, extracts features with ResNet50, and saves `train`, `test` and `val` datasets as `{ds}.tfrecord` files.]
 
 4. How to start the project.
     * [optional] Run `python3 utils/data_loader.py` to load the COCO caption dataset (requires at least 60 GB of free disk space). You may skip this step – extracted features are already saved under `data/processed_data` and will be further used in this project.
