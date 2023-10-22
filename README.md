@@ -15,7 +15,7 @@
 <img src="images/repo-structure.png" width="300" height="500">
 
 **Notes:**
-- The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step.
+- The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step – files are already saved in ``data`` folder for further usage.
 - The rest is executed via ``main.py``.
 
 
