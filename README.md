@@ -17,6 +17,4 @@
 **Notes:**
 - The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step – files are already saved in ``data`` folder for further usage.
 - The ``main.py`` will execute the rest of the project.
-
-
-5. python main.py --learning-rates 0.001 0.0001 --batch-sizes 32 64 --epochs 50 100
+    - ``python main.py --learning-rates 0.001 0.0001 --batch-sizes 32 64 --epochs 50 100``
