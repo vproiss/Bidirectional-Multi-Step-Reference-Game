@@ -12,6 +12,7 @@
 
 ## Reposetory Strucure
 
+<img src="URL_TO_THE_IMAGE" width="500" height="300">
 ![Repository Structure](images/repo-structure.png)
 
 
