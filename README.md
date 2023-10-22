@@ -8,7 +8,7 @@
     * Recreate the environment: ``conda env create --name myenv --file environment.yml```
     * Activate conda env: ``conda activate --name```
 
-2. ``data/`` and ``results/`` folders are pushed with .gitignore since the files are too large.
+2. ``data/`` and ``results/`` folders are pushed with ``.gitignore`` since the files are too large.
 
 3. Reposetory strucure.
 | configs
