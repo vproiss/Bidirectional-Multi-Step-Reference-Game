@@ -12,7 +12,7 @@
 
 ## Reposetory Strucure
 
-<img src="images/repo-structure.png" width="500" height="300">
+<img src="images/repo-structure.png" width="300" height="500">
 ![Repository Structure](images/repo-structure.png)
 
 
