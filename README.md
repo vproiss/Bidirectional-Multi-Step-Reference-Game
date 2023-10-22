@@ -10,7 +10,7 @@
     * Recreate the environment: ``conda env create --name myenv --file environment.yml``
     * Activate conda env: ``conda activate --name``
 
-## Reposetory Strucure
+## Reposetory Structure
 
 <img src="images/repo-structure.png" width="300" height="500">
 

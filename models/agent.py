@@ -233,7 +233,7 @@ class AgentCore(tf.keras.Model):
     This representation captures the temporal dependencies between the communication and the reference object features,
     using LSTM layers for sequence processing.
     """
-    def __init__(self, num_lstm_layers=3):
+    def __init__(self, num_lstm_layers=1):
         super(AgentCore, self).__init__()
         self.num_lstm_layers = num_lstm_layers
         self.comm_transform = tf.keras.layers.Dense(FEATURE_SIZE)  

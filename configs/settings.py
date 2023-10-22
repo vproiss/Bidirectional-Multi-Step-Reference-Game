@@ -1,5 +1,5 @@
 # Related to dataset.
-SUBSET_SIZE = 32 # It has to be at least of size 32.
+SUBSET_SIZE = 30 # It has to be at least twice less the size of a batch.
 BATCH_SIZE = 128
 
 # Related to communication protocol and embedding.

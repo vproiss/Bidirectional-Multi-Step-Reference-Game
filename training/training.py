@@ -1,4 +1,3 @@
-
 import os
 from typing import Tuple, List
 
@@ -148,7 +147,7 @@ def run_training(learning_rate=args.learning_rates[0], EPOCHS=args.epochs[0], BA
 
     test_loss_results = []
     test_accuracy_results = []
-    test_cumulative_rewards_per_epoch = []
+    #test_cumulative_rewards_per_epoch = []
 
     # Initialize states for the message and agent.
     message_states = None
@@ -214,50 +213,56 @@ def run_training(learning_rate=args.learning_rates[0], EPOCHS=args.epochs[0], BA
         val_accuracy_results.append(val_accuracy)
         val_cumulative_rewards_per_epoch.append(val_cumulative_reward)
 
-        # Evaluate the agent on the test dataset and append metrics to test lists.
-        test_loss, test_accuracy, test_cumulative_reward = evaluate_agent(agent, test_dataset, BATCH_SIZE)
-        print(f'Epoch {epoch}, Test Loss: {test_loss:.2f}, Test Accuracy: {test_accuracy:.2f}%, Test Cumulative Reward: {test_cumulative_reward:.2f}')
-        test_loss_results.append(test_loss)
-        test_accuracy_results.append(test_accuracy)
-        test_cumulative_rewards_per_epoch.append(test_cumulative_reward)
+    # Evaluate the agent on the test dataset and append metrics to test lists.
+    test_loss, test_accuracy, _ = evaluate_agent(agent, test_dataset, BATCH_SIZE)
+    print(f'Epoch {epoch}, Test Loss: {test_loss:.2f}, Test Accuracy: {test_accuracy:.2f}%')
+    test_loss_results.append(test_loss)
+    test_accuracy_results.append(test_accuracy)
+    #test_cumulative_rewards_per_epoch.append(test_cumulative_reward)
 
-    return agent, train_loss_results, train_accuracy_results, cumulative_rewards_per_epoch, val_loss_results, val_accuracy_results, val_cumulative_rewards_per_epoch, test_loss_results, test_accuracy_results, test_cumulative_rewards_per_epoch
+    return agent, train_loss_results, train_accuracy_results, cumulative_rewards_per_epoch, val_loss_results, val_accuracy_results, val_cumulative_rewards_per_epoch, test_loss_results, test_accuracy_results
 
 # Function to plot the training metrics.
 def plot_training_metrics(train_loss_results, train_accuracy_results, cumulative_rewards_per_epoch,
                           val_loss_results, val_accuracy_results, val_cumulative_rewards_per_epoch,
-                          test_loss_results, test_accuracy_results, test_cumulative_rewards_per_epoch,
+                          test_loss_results, test_accuracy_results, 
                           save_path):
-    epochs = range(len(train_loss_results))
+    epochs = range(1, len(train_loss_results) + 1)
+    
+    # Create a figure and a set of subplots
+    fig, axs = plt.subplots(3, 1, figsize=(12, 12))
+    
+    # Plotting training and validation loss
+    sns.lineplot(x=epochs, y=train_loss_results, label='Training Loss', ax=axs[0])
+    sns.lineplot(x=epochs, y=val_loss_results, label='Validation Loss', ax=axs[0])
+    
+    # Add test loss as a single point
+    axs[0].scatter(len(train_loss_results), test_loss_results[0], color='red', label='Test Loss')
+    axs[0].set_title("Loss vs. Epochs")
+    axs[0].set_xlabel("Epochs")
+    axs[0].set_ylabel("Loss")
+    axs[0].legend()
 
-    fig, ax1 = plt.subplots(figsize=(12, 6))
+    # Plotting training and validation accuracy
+    sns.lineplot(x=epochs, y=train_accuracy_results, label='Training Accuracy', ax=axs[1])
+    sns.lineplot(x=epochs, y=val_accuracy_results, label='Validation Accuracy', ax=axs[1])
+    
+    # Add test accuracy as a single point
+    axs[1].scatter(len(train_accuracy_results), test_accuracy_results[0], color='red', label='Test Accuracy')
+    axs[1].set_title("Accuracy vs. Epochs")
+    axs[1].set_xlabel("Epochs")
+    axs[1].set_ylabel("Accuracy")
+    axs[1].legend()
 
-    sns.lineplot(x=epochs, y=train_loss_results, label='Train Loss', ax=ax1)
-    sns.lineplot(x=epochs, y=val_loss_results, label='Validation Loss', ax=ax1)
-    sns.lineplot(x=epochs, y=test_loss_results, label='Test Loss', ax=ax1)
+    # Plotting training and validation cumulative rewards
+    sns.lineplot(x=epochs, y=cumulative_rewards_per_epoch, label='Training Cumulative Reward', ax=axs[2])
+    sns.lineplot(x=epochs, y=val_cumulative_rewards_per_epoch, label='Validation Cumulative Reward', ax=axs[2])
+    
+    axs[2].set_title("Cumulative Rewards vs. Epochs")
+    axs[2].set_xlabel("Epochs")
+    axs[2].set_ylabel("Cumulative Rewards")
+    axs[2].legend()
 
-    ax2 = ax1.twinx()
-    sns.lineplot(x=epochs, y=train_accuracy_results, label='Train Accuracy', ax=ax2, linestyle='dashed')
-    sns.lineplot(x=epochs, y=val_accuracy_results, label='Validation Accuracy', ax=ax2, linestyle='dashed')
-    sns.lineplot(x=epochs, y=test_accuracy_results, label='Test Accuracy', ax=ax2, linestyle='dashed')
-
-    ax1.set_xlabel('Epochs')
-    ax1.set_ylabel('Loss')
-    ax2.set_ylabel('Accuracy')
-
-    fig.tight_layout()
-    fig.savefig(os.path.join(save_path, 'loss_and_accuracy_plot.png'))
-    plt.show()
-
-    fig, ax1 = plt.subplots(figsize=(12, 6))
-
-    sns.lineplot(x=epochs, y=cumulative_rewards_per_epoch, label='Train Cumulative Reward', ax=ax1)
-    sns.lineplot(x=epochs, y=val_cumulative_rewards_per_epoch, label='Validation Cumulative Reward', ax=ax1)
-    sns.lineplot(x=epochs, y=test_cumulative_rewards_per_epoch, label='Test Cumulative Reward', ax=ax1)
-
-    ax1.set_xlabel('Epochs')
-    ax1.set_ylabel('Cumulative Reward')
-
-    fig.tight_layout()
-    fig.savefig(os.path.join(save_path, 'cumulative_reward_plot.png'))
+    plt.tight_layout()
+    plt.savefig(os.path.join(save_path, "metrics_plot.png"))
     plt.show()
