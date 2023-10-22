@@ -8,7 +8,7 @@
     * Recreate the environment: ``conda env create --name myenv --file environment.yml``
     * Activate conda env: ``conda activate --name``
 
-2. Large ``data/`` and ``results/`` folders are pushed with ``.gitignore``. Clone the repository to see the folders.
+2. Large ``data/`` and ``results/`` folders are pushed with ``.gitignore`` - ``git clone`` to work with files on your local machine.
 
 ## Reposetory Strucure
 
