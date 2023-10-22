@@ -1,4 +1,4 @@
-# Multi-Step Bi-directional Reference Game
+# Multi-Step Bidirectional Reference Game
 
 ## Description
 
