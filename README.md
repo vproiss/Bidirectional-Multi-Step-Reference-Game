@@ -2,7 +2,7 @@
 
 ## Description
 
-## Requirements
+## Project Set-Up
 
 1. Setting up the environment. 
     * Recreate the environment: ``conda env create --name myenv --file environment.yml```
