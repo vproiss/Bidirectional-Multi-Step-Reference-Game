@@ -12,7 +12,8 @@
 
 ## Reposetory Strucure
 
-├── README.md
+.
+├–– README.md
 ├── configs
 │   └── settings.py
 ├── data
