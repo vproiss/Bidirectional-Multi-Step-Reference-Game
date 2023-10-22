@@ -23,4 +23,4 @@
     - ``python3 main.py --learning-rates 0.01 --batch-sizes 64 --epochs 50``
     - ``python3 main.py --learning-rates 0.001 0.0001 --batch-sizes 64 128 --epochs 100 200``
 
-    After training is finished, the results are saved under ``results`` folder.
+    Once training is finished, the results are saved under ``results`` folder.
