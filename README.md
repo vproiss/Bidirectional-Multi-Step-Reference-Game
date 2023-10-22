@@ -14,9 +14,9 @@
 
 <img src="images/repo-structure.png" width="300" height="500">
 
-
-data_loader.py   # loads COCO captions dataset, extracts features with ResNet50, and saves train, test and val datasets as {ds}.tfrecord files.
-
+**Notes:**
+- The ``data_loader.py`` loads COCO captions dataset, extracts features with ResNet50, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You can skip this step.
+- The rest is executed via ``main.py``.
 
 4. How to start the project.
     * [optional] Run `python3 utils/data_loader.py` to load the COCO caption dataset (requires at least 60 GB of free disk space). You may skip this step – extracted features are already saved under `data/processed_data` and will be further used in this project.
