@@ -7,7 +7,7 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 
 # Function is NOT executed in 'main.py' script. 
 # Downloads the images from scracth and applies ResNe50 for feature extraction.
-# Make sure to have at least 60 GB of free disk space to load the COCO captions dataset; it will be saved it as '.tfrecord' data.
+# Make sure to have at least 60 GB of free disk space to load the COCO captions dataset; it will be saved as '.tfrecord' data.
 # Otherwise, the exracted features are already saved for training under "data/processed_data" directory. 
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
