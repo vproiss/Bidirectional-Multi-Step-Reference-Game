@@ -1,4 +1,4 @@
-# Emergent Language in Multi-Step Bidirectional Reference Game
+# Multi-Step Bidirectional Reference Game
 
 ## Description
 
