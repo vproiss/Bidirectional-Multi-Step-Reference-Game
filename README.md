@@ -10,8 +10,9 @@
 
 2. ``data/`` and ``results/`` folders are pushed with ``.gitignore`` since the files are too large.
 
-3. Reposetory strucure.
-| configs
+## Reposetory Strucure
+| -- configs
+     -- settings.py
 | data
     | processed_data
 | models
