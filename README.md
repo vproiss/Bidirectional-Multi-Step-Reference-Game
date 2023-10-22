@@ -11,7 +11,7 @@
 2. ``data/`` and ``results/`` folders are pushed with ``.gitignore`` since the files are too large.
 
 ## Reposetory Strucure
-
+.
 ├── README.md
 ├── configs
 │   └── settings.py
