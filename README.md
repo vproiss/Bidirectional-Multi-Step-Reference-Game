@@ -13,7 +13,6 @@
 ## Reposetory Strucure
 
 <img src="images/repo-structure.png" width="300" height="500">
-![Repository Structure](images/repo-structure.png)
 
 
 data_loader.py   # loads COCO captions dataset, extracts features with ResNet50, and saves train, test and val datasets as {ds}.tfrecord files.
