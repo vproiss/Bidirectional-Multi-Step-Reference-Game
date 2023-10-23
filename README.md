@@ -1,6 +1,6 @@
 # Multi-Step Bidirectional Reference Game
 
-## Description
+A multi-step reference game with a self-play agent that undertakes both the "sender" and the "receiver" roles.
 
 ## Project Set-Up
 
