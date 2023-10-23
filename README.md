@@ -7,7 +7,7 @@
 1. Clone the repository with ``git clone [repository URL]``.
 2. The large ``data/`` and ``results/`` folders are pushed with ``.gitignore``. 
    To work on the project, you will need to either download the dataset from scratch by running ``data_loader.py``,
-   or download the extracted features here, create a ``data/processed_data`` folder and store the files there.
+   or download the extracted features ![here](https://drive.google.com/drive/folders/10Oo1ZEsvpNVSyVK27O_7nWIj-AiOou55?usp=share_link), create a ``data/processed_data`` folder and store the files there.
 3. Setting up the environment. 
     * Recreate the environment: ``conda env create --name myenv --file environment.yml``
     * Activate conda env: ``conda activate --name``
