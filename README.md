@@ -1,6 +1,6 @@
 # Multi-Step Bidirectional Reference Game
 
-A multi-step bidirectional reference game with a self-play agent that undertakes both the "sender" and the "receiver" roles.
+A multi-step bidirectional reference game with a self-play agent that undertakes both the "sender" and the "receiver" roles. The agent was trained using the REINFORCE algorithm to maximize its cumulative reward.
 
 ## Project Set-Up
 
