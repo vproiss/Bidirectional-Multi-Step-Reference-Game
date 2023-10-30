@@ -12,10 +12,6 @@ A multi-step reference game with a self-play agent that undertakes both the "sen
     * Recreate the environment: ``conda env create --name myenv --file environment.yml``
     * Activate conda env: ``conda activate --name``
 
-## Reposetory Structure
-
-<img src="images/repo-structure.png" width="300" height="500">
-
 ## Project Execution
 - The ``data_loader.py`` loads ``coco_captions`` dataset, extracts features with ``ResNet50``, and saves ``train``, ``test`` and ``val`` datasets as ``{ds}.tfrecord`` files. You may skip this step if you want to use extracted features instead.
 - Run ``main.py`` to execute the rest of the project:
