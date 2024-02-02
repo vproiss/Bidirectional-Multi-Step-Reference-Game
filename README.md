@@ -1,6 +1,6 @@
 # Multi-Step Bidirectional Reference Game
 
-A multi-step bidirectional reference game with a self-play agent that undertakes both the "sender" and the "receiver" roles. The agent was trained using the REINFORCE algorithm to maximize its cumulative reward.
+A multi-step bidirectional reference game with a self-play agent that undertakes both the "sender" and the "receiver" roles. Goal: create and learn a new language from scratch. The agent was trained using the REINFORCE algorithm to maximize its cumulative reward. Keywords: reinforcement learning + natural language processing + transformer.
 
 ## Project Set-Up
 
