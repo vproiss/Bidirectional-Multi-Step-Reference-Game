@@ -1,6 +1,8 @@
 # Multi-Step Bidirectional Reference Game
 
-The goal of a reinforcement learning agent in a multi-step bidirectional game (involving an emergent language component) is to develop strategies and communication protocols that optimize its performance and outcomes within the game environment. Through interactions, the agent learns to make decisions and communicate effectively, leading to the emergence of a language (or symbols) understood between participating agents. This process aims at achieving high-level coordination and problem-solving abilities, enabling agents to negotiate, collaborate, or compete more effectively within the game's context.
+The goal of a reinforcement learning agent in a multi-step bidirectional game involving an emergent language component is to develop strategies and communication protocols that optimize its performance and outcomes within the game environment. Through interactions, the agent learns to make decisions and communicate effectively, leading to the emergence of a language or symbols understood between participating agents. This process aims at achieving high-level coordination and problem-solving abilities, enabling agents to negotiate, collaborate, or compete more effectively within the game's context. Only extracted image features (MSCOCO dataset) were used, and no annotated data.
+
+Keywords: reinforcement learning + natural language processing + transformer + REINFORCE.
 
 ## Project Set-Up
 
